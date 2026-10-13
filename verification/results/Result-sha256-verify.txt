@@ -1,0 +1,36 @@
+SHA-256 Quantum Circuit -- NIST Test-Vector Verification (FIPS 180-4 / CAVP)
+==================================================================
+
+Input            : "abc" (FIPS 180-4 example)
+Msg (hex)        : 616263
+Compression out  : 506e3058d39a216504d24d6cb85e2ce95ef50f24fb121210948d25b6961f4894
+Circuit + IV     : ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad
+NIST SHA-256     : ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad
+Match            : PASS
+Ancilla reuse    : PASS (214 reuse events, 23296 qubits read |0>: K+W slot 63, Maj output slot 64, register set before reload 63, reused output registers 24)
+
+Input            : "" (empty; CAVP ShortMsg Len=0)
+Msg (hex)        : (empty)
+Compression out  : 79a6dddbdd946d8f5e8d0156f41fc3ead69fef65c9962ac08511bf701c71eb3c
+Circuit + IV     : e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+NIST SHA-256     : e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+Match            : PASS
+Ancilla reuse    : PASS (214 reuse events, 23296 qubits read |0>: K+W slot 63, Maj output slot 64, register set before reload 63, reused output registers 24)
+
+Input            : CAVP ShortMsg Len=8
+Msg (hex)        : d3
+Compression out  : be8cb678ebe26443f2ccba2465bb0ad0791c70aa43e4f3970967ed475eb735a8
+Circuit + IV     : 28969cdfa74a12c82f3bad960b0b000aca2ac329deea5c2328ebc6f2ba9802c1
+NIST SHA-256     : 28969cdfa74a12c82f3bad960b0b000aca2ac329deea5c2328ebc6f2ba9802c1
+Match            : PASS
+Ancilla reuse    : PASS (214 reuse events, 23296 qubits read |0>: K+W slot 63, Maj output slot 64, register set before reload 63, reused output registers 24)
+
+Input            : CAVP ShortMsg Len=256
+Msg (hex)        : 09fc1accc230a205e4a208e64a8f204291f581a12756392da4b8c0cf5ef02b95
+Compression out  : e53adb604084087423a93681e42c082bbb48a788e9467ed8698389ab5037b98b
+Circuit + IV     : 4f44c1c7fbebb6f9601829f3897bfd650c56fa07844be76489076356ac1886a4
+NIST SHA-256     : 4f44c1c7fbebb6f9601829f3897bfd650c56fa07844be76489076356ac1886a4
+Match            : PASS
+Ancilla reuse    : PASS (214 reuse events, 23296 qubits read |0>: K+W slot 63, Maj output slot 64, register set before reload 63, reused output registers 24)
+
+=== ALL TEST VECTORS PASSED ===

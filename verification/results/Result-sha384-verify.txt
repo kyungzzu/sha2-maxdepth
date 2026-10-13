@@ -1,0 +1,36 @@
+SHA-384 Quantum Circuit -- NIST Test-Vector Verification (FIPS 180-4 / CAVP)
+==================================================================
+
+Input            : "abc" (FIPS 180-4 example)
+Msg (hex)        : 616263
+Compression out  : ff44d7e1849dbfb35306143f64497b0095d33150de6df44c055b73814cf102b41952e0c3a227c0f2ca06a219cc701096
+Circuit + IV     : cb00753f45a35e8bb5a03d699ac65007272c32ab0eded1631a8b605a43ff5bed8086072ba1e7cc2358baeca134c825a7
+NIST SHA-384     : cb00753f45a35e8bb5a03d699ac65007272c32ab0eded1631a8b605a43ff5bed8086072ba1e7cc2358baeca134c825a7
+Match            : PASS
+Ancilla reuse    : PASS (262 reuse events, 57856 qubits read |0>: K+W slot 79, Maj output slot 80, register set before reload 79, reused output registers 24)
+
+Input            : "" (empty; CAVP ShortMsg Len=0)
+Msg (hex)        : (empty)
+Compression out  : 6cf4c34990a6f760ea3f09547b350e6390a4b5b6e44d2a2c36dcdae66ce888a1c01bb857e7af5aca46668869e040a44a
+Circuit + IV     : 38b060a751ac96384cd9327eb1b1e36a21fdb71114be07434c0cc7bf63f6e1da274edebfe76f65fbd51ad2f14898b95b
+NIST SHA-384     : 38b060a751ac96384cd9327eb1b1e36a21fdb71114be07434c0cc7bf63f6e1da274edebfe76f65fbd51ad2f14898b95b
+Match            : PASS
+Ancilla reuse    : PASS (262 reuse events, 57856 qubits read |0>: K+W slot 79, Maj output slot 80, register set before reload 79, reused output registers 24)
+
+Input            : CAVP ShortMsg Len=8
+Msg (hex)        : c5
+Compression out  : e96fd57cb4cac78b1747e67113fcee33a141009639beda6f476075c9950f8f2753100877d8ab41803cd62b2cf81ecea0
+Circuit + IV     : b52b72da75d0666379e20f9b4a79c33a329a01f06a2fb7865c9062a28c1de860ba432edfd86b4cb1cb8a75b46076e3b1
+NIST SHA-384     : b52b72da75d0666379e20f9b4a79c33a329a01f06a2fb7865c9062a28c1de860ba432edfd86b4cb1cb8a75b46076e3b1
+Match            : PASS
+Ancilla reuse    : PASS (262 reuse events, 57856 qubits read |0>: K+W slot 79, Maj output slot 80, register set before reload 79, reused output registers 24)
+
+Input            : CAVP ShortMsg Len=440
+Msg (hex)        : a8de55170c6dc0d80de32f508bf49b7046aeea4b975a511b5ea3dc853bfa4b1e0138202d6785f6b3017914a86f824288d586dc0e8bc924
+Compression out  : 600813ae537c621f2f012e85ab5b0670aea42203d48de97268a9623ab68dea458dd5da3c0977ecf9ab26a822c2e5e857
+Circuit + IV     : 2bc3b10c148200f7919b57afe1d7db773ffd235e04fec6897dd94f13ad9c437ef50900a40937f82a39daf2aa2b3dfd68
+NIST SHA-384     : 2bc3b10c148200f7919b57afe1d7db773ffd235e04fec6897dd94f13ad9c437ef50900a40937f82a39daf2aa2b3dfd68
+Match            : PASS
+Ancilla reuse    : PASS (262 reuse events, 57856 qubits read |0>: K+W slot 79, Maj output slot 80, register set before reload 79, reused output registers 24)
+
+=== ALL TEST VECTORS PASSED ===

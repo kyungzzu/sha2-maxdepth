@@ -1,0 +1,36 @@
+SHA-512 Quantum Circuit -- NIST Test-Vector Verification (FIPS 180-4 / CAVP)
+==================================================================
+
+Input            : "abc" (FIPS 180-4 example)
+Msg (hex)        : 616263
+Compression out  : 73a54f399fa4b1b210d9c4c4295599f6d67806db8b148677654ef9abec389ca9d08446aa79693ed79bb4d39778c07f9e25c96a7768fb2aa3ceb9fc3691ce8326
+Circuit + IV     : ddaf35a193617abacc417349ae20413112e6fa4e89a97ea20a9eeee64b55d39a2192992a274fc1a836ba3c23a3feebbd454d4423643ce80e2a9ac94fa54ca49f
+NIST SHA-512     : ddaf35a193617abacc417349ae20413112e6fa4e89a97ea20a9eeee64b55d39a2192992a274fc1a836ba3c23a3feebbd454d4423643ce80e2a9ac94fa54ca49f
+Match            : PASS
+Ancilla reuse    : PASS (262 reuse events, 57856 qubits read |0>: K+W slot 79, Maj output slot 80, register set before reload 79, reused output registers 24)
+
+Input            : "" (empty; CAVP ShortMsg Len=0)
+Msg (hex)        : (empty)
+Compression out  : 6579facd8b32efb535ec79cb51a2d8cc99b1f0920cc21db1dea4b3e7744fb2ddf6c27ebcaf9f6fdf647db0465c408010443558114bffbd1649576561e5a9b8c5
+Circuit + IV     : cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e
+NIST SHA-512     : cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e
+Match            : PASS
+Ancilla reuse    : PASS (262 reuse events, 57856 qubits read |0>: K+W slot 79, Maj output slot 80, register set before reload 79, reused output registers 24)
+
+Input            : CAVP ShortMsg Len=8
+Msg (hex)        : 21
+Compression out  : ce27c03e21a1879532f1f96ecd208df711209bbaf84e785def241a5e9ed0ec974e3f932e02de7e3c604ff44e4c8a3f3ea97e2fa0579c750d9779a8d2aee0e7c1
+Circuit + IV     : 3831a6a6155e509dee59a7f451eb35324d8f8f2df6e3708894740f98fdee23889f4de5adb0c5010dfb555cda77c8ab5dc902094c52de3278f35a75ebc25f093a
+NIST SHA-512     : 3831a6a6155e509dee59a7f451eb35324d8f8f2df6e3708894740f98fdee23889f4de5adb0c5010dfb555cda77c8ab5dc902094c52de3278f35a75ebc25f093a
+Match            : PASS
+Ancilla reuse    : PASS (262 reuse events, 57856 qubits read |0>: K+W slot 79, Maj output slot 80, register set before reload 79, reused output registers 24)
+
+Input            : CAVP ShortMsg Len=440
+Msg (hex)        : ec2a92e47f692b53c1355475c71ceff0b0952a8b3541b2938270247d44e7c5cc04e17236b353da028674eab4047d89ec5dad868cfd91ce
+Compression out  : 5e30e3f9540302b4b75bc96a240a8f197d993d52a813a5f284c9c1d987727e4312ff99038ebe8f53d661749b101a2bc65dce95dcf3b3d2049d9ae1c7a17034cb
+Circuit + IV     : c83aca6147bfcbbc72c377efa8d53654ba0830c5a6a89e1d2a19b713e68fb534640deb833ca512247166dd273b5897e57d526f88eef58f6ff97baee0b4ee5644
+NIST SHA-512     : c83aca6147bfcbbc72c377efa8d53654ba0830c5a6a89e1d2a19b713e68fb534640deb833ca512247166dd273b5897e57d526f88eef58f6ff97baee0b4ee5644
+Match            : PASS
+Ancilla reuse    : PASS (262 reuse events, 57856 qubits read |0>: K+W slot 79, Maj output slot 80, register set before reload 79, reused output registers 24)
+
+=== ALL TEST VECTORS PASSED ===
